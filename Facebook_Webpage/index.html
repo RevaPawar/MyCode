@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Facebook</title>
+</head>
+<body>
+    <div class="header" style="background-color: rgb(20, 20, 183); padding-bottom: 10px; padding-top: 5px;">
+        <div class="logo" style="color: aliceblue;">
+            <h1 style="margin-left: 15px;">facebook</h1>
+        </div>
+        <div class="login" style="display: inline-block;">
+            <div class="email-container">
+
+                <input type="text" class="email" size="30px" placeholder="Enter email id...">
+                <input type="password" class="passwords" size="30px" placeholder="Enter password">
+                <button class="login-btn">Login</button>
+                
+            </div>
+            <div class="password-container">
+
+                <label for="remember" style="color: aliceblue;">Remember me</label>
+                <input type="checkbox" name="remember" id="remember">
+                <a href="#" style="color: aliceblue; margin-left: 100px; margin-top: 50px;">Forgotten my password</a>
+            
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div class="content" style="    background-color: #e9ebee; height: 100%;">
+        <div class="network">
+                <h2 style="display: flex; justify-content: center;">Facebook is useless without friends. Make More Friends.</h2>
+            <img src="image.png" height="450px" width="550px" alt="Sample" style="margin-top: 80px; margin-left: 300px;">
+        </div>
+
+        <div class="signup-form" style="margin-left: 200px; margin-top: 80px; width: 45%;">
+            <h1 style="color: blue;">Create an Account</h1>
+            <p style="color: blue;">It's free and always will be !</p>
+            <br>
+            <!-- <label for="name">FirstName:</label> -->
+            <input type="text" style="display: inline;" placeholder="Firstname">
+            <!-- <label for="name">LastName:</label> -->
+            <input type="text"style="display: inline;" placeholder="Lastname">
+
+            <!-- <label for="email">Email:</label> -->
+            <input type="email" style="width: 100%;" placeholder="Email">
+            <input type="email" style="width: 100%;" placeholder="Re-enter email">
+            <input type="password" style="width: 100%;" placeholder="Password">
+            <div class="birthday" style="width: 100%;">
+                <input type="text" placeholder="dd/mm/yyyy">
+            </div>
+            <!-- check box for male and female -->
+            <div class="gender" style="width: 100%;">
+                <input type="radio" id="male" name="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender">
+                <label for="female">Female</label>
+            </div>
+            <button class="Submit-btn">SignUp</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

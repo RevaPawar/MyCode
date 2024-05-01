@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .todo {
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.25rem;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">LOGO</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Need Help</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Message</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Dashboard:</h2>
+        <br>
+        <br>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Team</th>
+                    <th>All Star</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mysh</td>
+                    <td>Warriors</td>
+                    <td><span class="badge badge-success">Yes</span></td>
+                    <td><button class="btn btn-danger">X</button></td>
+                </tr>
+                <tr>
+                    <td>Letsun</td>
+                    <td>Cavaliers</td>
+                    <td><span class="badge badge-danger">No</span></td>
+                    <td><button class="btn btn-danger">X</button></td>
+                </tr>
+                <tr>
+                    <td>Donaye</td>
+                    <td>Heat</td>
+                    <td><span class="badge badge-danger">No</span></td>
+                    <td><button class="btn btn-danger">X</button></td>
+                </tr>
+                <tr>
+                    <td>Roke</td>
+                    <td>Lakers</td>
+                    <td><span class="badge badge-warning">Not Sure</span></td>
+                    <td><button class="btn btn-danger">X</button></td>
+                </tr>
+                <tr>
+                    <td>Iuneh</td>
+                    <td>Celtics</td>
+                    <td><span class="badge badge-success">Yes</span></td>
+                    <td><button class="btn btn-danger">X</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+
+        <h2>Todos:</h2>
+        <br>
+
+        <div class="todos">
+            <div class="todo bg-success">Feel good about hustling</div>
+            <div class="todo bg-info ">Feel assumed about hustling</div>
+            <div class="todo bg-warning">Feel worried about husttlers</div>
+            <div class="todo bg-light">Maybe i should read the docs.</div>
+            <div class="todo bg-danger ">Congrats man</div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

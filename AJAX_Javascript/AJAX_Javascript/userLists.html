@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            margin: 50px auto;
+            border: 1px solid;
+            box-shadow: 3px black;
+            max-width: 500px;
+            padding: 20px;
+            border-radius: 9px;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        table{
+            width: 100%;
+            border: 3px;
+            border-collapse: collapse;
+            border: black;
+        }
+
+        th{
+            background-color: lightblue;
+            padding: 10px;
+            text-align: left;
+            font-size: larger;
+        }
+
+        td{
+            background-color:azure;
+            text-align: left;
+            padding: 10px;
+            border-bottom: 2px gray solid;
+            font-size: medium;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Details</h1>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody id="userLists"></tbody>
+        </table>
+    </div>
+
+    <script>
+        
+        var users = JSON.parse(localStorage.getItem("users")) || [];
+        
+        var userLists= document.getElementById("userLists");
+
+        users.forEach(function(user){
+            var row= document.createElement("tr");
+
+            row.innerHTML =
+            `<td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.gender}</td>
+            <td>${user.address}</td>
+            <td>${user.age}</td> 
+            `;
+
+            userLists.appendChild(row);
+        });
+
+    </script>
+</body>
+</html>

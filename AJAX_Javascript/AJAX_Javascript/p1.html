@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="p1.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Registration Form</h1>
+
+        <form action="" name="registration" id="form">
+            <label for="name">Name </label>
+            <input type="text" name="name" id="name" placeholder="Enter Name" required>
+
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="Enter your Email" required>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter your Password" required>
+
+            <label for="gender">Gender</label>
+            <div>
+                <input type="radio" name="gender"  id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+            </div>
+
+            <label for="address">Address</label>
+            <textarea name="address" id="address" cols="30" rows="6" placeholder="Enter your Address"></textarea>
+
+            <label for="age">Age</label>
+            <select name="age" id="age">
+                <option value="0-20">0-20</option>
+                <option value="21-40">21-40</option>
+                <option value="41-60">41-60</option>
+                <option value="60+">60+</option>
+            </select>
+
+            <div class="form-footer">
+                <button type="submit" id="submit_btn">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+
+
+        </form>
+
+    </div>
+
+    <script>
+
+        // When the form is submitted, the data entered by the user is collected into an object named user, which holds the user's name, 
+        //email, age, gender, and address. This object is then pushed into the users array, which ultimately gets stored in localStorage.
+
+        function addData(event){
+            event.preventDefault();
+
+            const name= document.getElementById("name").value;
+            const email= document.getElementById("email").value;
+            const gender= document.querySelector('input[name="gender"]:checked').value;
+            const address= document.getElementById("address").value;
+            const age= document.getElementById("age").value;
+
+            const user={
+                name,
+                email,
+                age,
+                gender,
+                address,
+            }
+
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+
+            users.push(user);
+
+            localStorage.setItem("users", JSON.stringify(users));
+
+            window.location.href= "userLists.html";
+        }
+
+        document.getElementById("form").addEventListener("submit",addData);
+    </script>
+    
+</body>
+</html>

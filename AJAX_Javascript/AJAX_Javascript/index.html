@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+      
+    </style>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Registration Form</h1>
+
+      <form action="" name="Registration" id="form">
+
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Enter your name" id="name" required />
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Enter your email" id="email" required />
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          placeholder="Enter your password"
+          id="password"
+          required
+        />
+        <label for="gender">Gender:</label>
+        <div>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+        </div>
+        <label for="address">Address:</label>
+        <textarea
+          id="address"
+          placeholder="Enter your address"
+          rows="3"
+        ></textarea>
+        <label for="age">Age:</label>
+        <select id="age">
+          <option value="0-20">0-20</option>
+          <option value="21-40">21-40</option>
+          <option value="41-60">41-60</option>
+          <option value="61+">61+</option>
+        </select>
+        <div class="form-footer">
+          <button type="submit" id="submit_btn">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+
+    </div>
+
+    <script>
+      function addData(event) {
+        event.preventDefault(); // Prevent form from submitting
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const gender = document.querySelector(
+          'input[name="gender"]:checked'
+        ).value;
+        const address = document.getElementById("address").value;
+        const age = document.getElementById("age").value;
+
+        const user = {
+          name,
+          email,
+          gender,
+          address,
+          age,
+        };
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        users.push(user);
+
+        localStorage.setItem("users", JSON.stringify(users));
+
+        window.location.href = "userList.html";
+      }
+
+      document.getElementById("form").addEventListener("submit", addData);
+    </script>
+  </body>
+</html>

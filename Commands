@@ -1,0 +1,14 @@
+ifconfig
+
+ls
+
+touch
+
+cat new.txt
+
+nano new.txt
+
+cat newfile.txt
+
+
+scp new.txt vagrant@10.0.2.5 :/home/vagrant
